@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calatrava Elementary School | Calatrava, Romblon</title>
+<meta name="description" content="Official website of Calatrava Elementary School, Calatrava, Romblon. School ID 111393. News, reports, faculty and more.">
+<link rel="icon" href="assets/logo-placeholder.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#home">
+      <img class="logo" src="assets/logo.png" width="52" height="52" alt="Calatrava Elementary School logo"
+           onerror="this.onerror=null;this.src='assets/logo-placeholder.svg'">
+      <span><strong>Calatrava Elementary School</strong><small><span data-i18n="schoolId">School ID</span> 111393</small></span>
+    </a>
+    <nav id="nav" aria-label="Main">
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#news" data-i18n="nav_news">News</a>
+      <a href="#reports" data-i18n="nav_reports">Reports</a>
+      <a href="#faculty" data-i18n="nav_faculty">Faculty</a>
+      <a href="#gallery" data-i18n="nav_gallery">Gallery</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="fil" aria-pressed="false">FIL</button>
+    </div>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+  <section id="home" class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1>Calatrava Elementary School</h1>
+        <p class="place">Calatrava, Romblon</p>
+        <p class="lede" id="tagline"></p>
+        <dl class="ids">
+          <div><dt data-i18n="schoolId">School ID</dt><dd>111393</dd></div>
+          <div><dt data-i18n="location">Location</dt><dd>Calatrava, Romblon</dd></div>
+        </dl>
+        <div class="cta">
+          <a class="btn" href="#news" data-i18n="cta_news">Read the latest news</a>
+          <a class="btn ghost" href="#reports" data-i18n="cta_reports">View school reports</a>
+        </div>
+      </div>
+      <figure class="arch-wrap">
+        <div class="arch">
+          <img src="assets/school.jpg" alt="Calatrava Elementary School campus"
+               onerror="this.onerror=null;this.src='assets/school-placeholder.svg'">
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band" aria-label="School at a glance">
+    <div class="wrap" id="statsGrid" aria-live="polite"></div>
+  </section>
+
+  <section id="about" class="sec">
+    <div class="wrap">
+      <h2 data-i18n="about_h">About our school</h2>
+      <div class="about-grid">
+        <div>
+          <p class="big" id="aboutText"></p>
+          <div class="vm">
+            <article><h3 data-i18n="vision">Vision</h3><p id="visionText"></p></article>
+            <article><h3 data-i18n="mission">Mission</h3><p id="missionText"></p></article>
+          </div>
+        </div>
+        <aside class="principal" id="principalCard" hidden>
+          <p class="pname" id="principalName"></p>
+          <p class="prole" data-i18n="principal">School Head</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" class="sec alt">
+    <div class="wrap">
+      <h2 data-i18n="news_h">News and announcements</h2>
+      <div id="newsList" class="news-grid"></div>
+      <button class="btn ghost more" id="newsMore" type="button" hidden data-i18n="more">Show more</button>
+    </div>
+  </section>
+
+  <section id="reports" class="sec">
+    <div class="wrap">
+      <h2 data-i18n="reports_h">Reports and outputs</h2>
+      <p class="sub" data-i18n="reports_sub">Official school reports, accomplishments and learner outputs. Updated from our school records.</p>
+      <div class="filters">
+        <label class="f"><span data-i18n="search">Search</span><input id="rSearch" type="search" autocomplete="off"></label>
+        <label class="f"><span data-i18n="category">Category</span><select id="rCat"></select></label>
+        <label class="f"><span data-i18n="year">School year</span><select id="rYear"></select></label>
+      </div>
+      <ul id="reportList" class="reports"></ul>
+    </div>
+  </section>
+
+  <section id="faculty" class="sec alt">
+    <div class="wrap">
+      <h2 data-i18n="faculty_h">Faculty and staff</h2>
+      <div id="facultyGrid" class="faculty"></div>
+    </div>
+  </section>
+
+  <section id="gallery" class="sec">
+    <div class="wrap">
+      <h2 data-i18n="gallery_h">Gallery</h2>
+      <div id="galleryGrid" class="gallery"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="sec alt">
+    <div class="wrap contact-grid">
+      <div>
+        <h2 data-i18n="contact_h">Visit or contact us</h2>
+        <ul class="contact" id="contactList"></ul>
+      </div>
+      <div class="map">
+        <iframe title="Map of Calatrava Elementary School" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Calatrava+Elementary+School,+Calatrava,+Romblon&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <img class="logo" src="assets/logo.png" width="44" height="44" alt=""
+         onerror="this.onerror=null;this.src='assets/logo-placeholder.svg'">
+    <p><strong>Calatrava Elementary School</strong><br>Calatrava, Romblon &nbsp;|&nbsp; <span data-i18n="schoolId">School ID</span> 111393</p>
+    <p class="copy">&copy; <span id="yr"></span> Calatrava Elementary School</p>
+  </div>
+</footer>
+
+<dialog id="lightbox" aria-label="Photo viewer">
+  <button type="button" id="lbClose" aria-label="Close">&times;</button>
+  <img id="lbImg" alt="">
+  <p id="lbCap"></p>
+</dialog>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
